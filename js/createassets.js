@@ -2,7 +2,7 @@
 function preFlightComboElement() {
 
     var propsearchbar = document.getElementById("searchbar");
-    var pkgsearchbar = document.getElementById("packagesearchbar");
+    var pkgsearchbar = document.getElementById("tasksearchbar");
 
     var propentry = propsearchbar.value;
     var pkgentry = pkgsearchbar.value;
@@ -32,7 +32,7 @@ function preFlightComboElement() {
 
 function preFlightPackageElement() {
 
-    var pkgsearchbar = document.getElementById("packagesearchbar");
+    var pkgsearchbar = document.getElementById("tasksearchbar");
     var pkgentry = pkgsearchbar.value;
     var pkgname;
 
@@ -50,7 +50,7 @@ function preFlightPackageElement() {
 }
 
 
-function createPropAndPackage() {
+function updateShotOrTask() {
 
     
     //CREDENTIALS AND SESSION
