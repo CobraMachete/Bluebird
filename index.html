@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shot and Task Renamer</title>
+        <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" type="text/css" href="css/inter.css">
+        <link rel="stylesheet" type="text/css" href="css/etc.min.css">
+        <link rel="stylesheet" type="text/css" href="css/ext.min.css">
+        <link rel="stylesheet" type="text/css" href="css/ftrack-theme-dark-vars.min.css">
+        <link rel="stylesheet" type="text/css" href="css/ftrack-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/theme-dark.css">
+
+        <script type="text/javascript" src="js/jquery-3.7.1.slim.min.js"></script>
+
+        <script type="text/javascript" src="js/ui.js"></script>
+        <script type="text/javascript" src="js/data_handler.js"></script>
+        <script type="text/javascript" src="js/mousetrap.min.js"></script>
+        
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+
+                var shotsearchbox = document.getElementById("searchbar");
+                var tasksearchbox = document.getElementById("tasksearchbar");
+
+                //EVENT LISTENER FOR PACKAGE SEARCH BOX
+                shotsearchbox.addEventListener('input', function(e) {
+                    
+                    var targinput = event.target.value;
+                    var sanshot = sanitizeshot(targinput);
+                    
+                    // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                    shotsearchbox.value = sanshot;
+
+                });
+
+                //EVENT LISTENER FOR PACKAGE SEARCH BOX
+                tasksearchbox.addEventListener('input', function(e) {
+                    
+                    var targinput = event.target.value;
+                    var sanshot = sanitizeshot(targinput);
+                    
+                    // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                    tasksearchbox.value = sanshot;
+
+                });
+
+
+
+
+            });
+
+            
+
+        </script>
+        <div id="widget">
+            <div class="master-container" id="mastercontainer">
+                <!------------------------ SHOT RENAMER ------------------------>
+                <div class="main-container" id="maincontainer">
+
+                    <div class="title-row">
+                        <div class="app-title-thin"><p>Shot<span class="app-title-big"> Renamer</span></p></div>
+                        <!-- <div class="app-title-big"><p>Creator</p></div> -->
+                    </div>
+
+                    <div class="search-container" id="searchcontainer">
+                        <div class="shot-search-bar" id="propertysearch">
+                            <input id="searchbar" type="text" name="search" placeholder="Property...">
+                        </div>
+
+                        <div class="package-search-bar" id="packagesearch" style="margin-top: 10px">
+                            <input id="tasksearchbar" type="text" name="search" placeholder="Package...(ex: 00_regular_season)">
+                        </div>
+
+                        <div class="bottomrowcontainer">
+                            <div class="createbtncont">
+                                <button class="createbtn" type="button" onclick="createPropAndPackage()">Create Property</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+            
+            
+        </div>
+
+        <script type="text/javascript" src="js/ftrack.min.js"></script>
+        <script type="text/javascript" src="js/ftrack_widget.js"></script>
+        <script type="text/javascript" src="js/shots_index.js"></script>
+        <script type="text/javascript" src="js/createassets.js"></script>
+        
+        
+    </body>
+</html>
