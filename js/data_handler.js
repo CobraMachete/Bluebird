@@ -20,8 +20,8 @@ function readTeamsJson(jsonfile) {
     var keys = Object.keys(teams_data)
     
 
-    dropdownpopulate(teams_data);
-    taskdropdownpopulate();
+    // dropdownpopulate(teams_data);
+    // taskdropdownpopulate();
 }
 
 function buildThumbList(props) {
