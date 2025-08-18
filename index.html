@@ -23,21 +23,26 @@
     </head>
     <body>
         <script>
+
             $(document).ready(function() {
 
                 var shotsearchbox = document.getElementById("searchbar");
                 var tasksearchbox = document.getElementById("tasksearchbar");
 
-                //EVENT LISTENER FOR PACKAGE SEARCH BOX
-                shotsearchbox.addEventListener('input', function(e) {
+                
+                // shotsearchbox.addEventListener('input', function(e) {
                     
-                    var targinput = event.target.value;
-                    var sanshot = sanitizeshot(targinput);
+                //     var targinput = event.target.value;
+                //     var sanshot = sanitizeshot(targinput);
                     
-                    // PUSHING THE SANITIZED TEXT BACK TO FIELD
-                    shotsearchbox.value = sanshot;
+                //     // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                //     shotsearchbox.value = sanshot;
 
-                });
+                // });
+
+                // AUTOFILL CURRENT SOT TEXT BOX
+
+
 
                 //EVENT LISTENER FOR PACKAGE SEARCH BOX
                 tasksearchbox.addEventListener('input', function(e) {
@@ -50,12 +55,11 @@
 
                 });
 
-
+                setCurrentShotNameField();
 
 
             });
             
-
         </script>
         <div id="widget">
             <div class="master-container" id="mastercontainer">
@@ -68,8 +72,8 @@
                     </div>
 
                     <div class="search-container" id="searchcontainer">
-                        <div class="shot-search-bar" id="propertysearch">
-                            <input id="searchbar" type="text" name="search" placeholder="Current Shot...">
+                        <div class="shot-search-bar-typeshot" id="propertysearch">
+                            <input id="searchbar" type="text" name="search" placeholder="Current Shot..." readonly>
                         </div>
 
                         <div class="package-search-bar" id="packagesearch" style="margin-top: 10px">

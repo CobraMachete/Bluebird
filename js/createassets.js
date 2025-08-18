@@ -49,6 +49,57 @@ function preFlightPackageElement() {
 
 }
 
+function setCurrentShotNameField() {
+
+    var shotsearchbox = document.getElementById("searchbar");
+        shotsearchbox.value = "8888_dummy_shot_a"
+
+     //CREDENTIALS AND SESSION
+    var creds = window.credentials;
+    console.debug(creds);
+
+    session = new ftrack.Session(
+        creds.serverUrl,
+        creds.apiUser,
+        creds.apiKey
+    );
+
+    var namecheck = preFlightComboElement();
+
+    if (namecheck !== false) {
+
+        //GETTING BASE ENTITY
+        var entity = ftrackWidget.getEntity();
+
+        console.log(entity);
+
+        var shotsearchbox = document.getElementById("searchbar");
+        var propsearchfield = document.getElementById("propertysearch");
+
+        // CHECKING IF SHOT OR TASK
+        if (entity.type == "Shot") {
+
+            if (propsearchfield.classList.contains("shot-search-bar-typetask")) {
+                propsearchfield.classList.remove("shot-search-bar-typetask");
+                propsearchfield.classList.add("shot-search-bar-typeshot");
+            }
+
+            shotsearchbox.value = entity.name;
+
+        } else {
+
+            if (propsearchfield.classList.contains("shot-search-bar-typeshot")) {
+                propsearchfield.classList.remove("shot-search-bar-typeshot");
+                propsearchfield.classList.add("shot-search-bar-typetask");
+            }
+
+            shotsearchbox.value = entity.name;
+
+        }
+        
+    }
+}
+
 
 function updateShotOrTask() {
 
