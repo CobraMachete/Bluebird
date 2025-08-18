@@ -52,11 +52,10 @@ function preFlightPackageElement() {
 function setCurrentShotNameField() {
 
     var shotsearchbox = document.getElementById("searchbar");
-        shotsearchbox.value = "8888_dummy_shot_a"
 
      //CREDENTIALS AND SESSION
     var creds = window.credentials;
-    console.debug(creds);
+    console.log(creds);
 
     session = new ftrack.Session(
         creds.serverUrl,
