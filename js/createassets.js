@@ -77,6 +77,7 @@ function setCurrentShotNameField() {
 
         console.log(entity)
         console.log(theselectedent)
+
         // CHECKING IF SHOT OR TASK
         if (theselectedent.__entity_type__ == "Shot") {
 
@@ -106,7 +107,7 @@ function updateShotOrTask() {
 
     
     //CREDENTIALS AND SESSION
-    var creds = window.credentials;
+    var creds = ftrackWidget.getCredentials();
     console.debug(creds);
 
     session = new ftrack.Session(

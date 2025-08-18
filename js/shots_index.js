@@ -49,31 +49,13 @@
             theprjid = values[1].data[0].project_id;
             propName = values[2].data[0].ancestors[0].name;
             console.log("=======================================================    THE PRODUCTION IS:     ====================================================================");
-            console.log(values[0].data[0])
+            console.log(theselectedent)
             console.log("=======================================================    THE PROJECT IS:     ====================================================================");
-            console.log(values[1].data[0])
+            console.log(theprjid)
             console.log("=======================================================    THE PROPNAME IS:     ====================================================================");
-            console.log(values[2].data[0])
+            console.log(propName)
             
             
-            // Promise.all([thumbFoldSearch, newThumbFoldSearch]).then(function (vals) {
-                
-            //     // if (vals[0].data.length !== 0) {
-            //     //     thumbResFold = vals[0].data[0].id;
-            //     //     console.log("=======================================================    THE OLD THUMBNAILS ARE:     ====================================================================");
-            //     //     console.log(thumbResFold);
-            //     // }
-
-            //     if (vals[1].data.length !== 0) {
-            //         thumbResFold = vals[1].data[0].id;
-            //         console.log("=======================================================    THE NEW THUMBNAIL FOLDER ID IS:    ====================================================================");
-            //         console.log(thumbResFold);
-            //     }
-
-
-                
-                
-            // });
             
         });
     }
