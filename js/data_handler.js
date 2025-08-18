@@ -4,8 +4,8 @@ var selected_data;
 var thumbnailwhitelist = [];
 
 
-fetch('./temp_data/shotsinfo.json').then((response) => response.json()).then((json) => readShotsJson(json));
-fetch('./temp_data/teamsinfo.json').then((response) => response.json()).then((json) => readTeamsJson(json));
+fetch('https://cobramachete.github.io/Ox-Cart/temp_data/shotsinfo.json').then((response) => response.json()).then((json) => readShotsJson(json));
+fetch('https://cobramachete.github.io/Ox-Cart/temp_data//teamsinfo.json').then((response) => response.json()).then((json) => readTeamsJson(json));
 
 
 function readShotsJson(jsonfile) {
