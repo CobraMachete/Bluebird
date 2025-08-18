@@ -54,14 +54,14 @@ function setCurrentShotNameField() {
     var shotsearchbox = document.getElementById("searchbar");
 
      //CREDENTIALS AND SESSION
-    var creds = ftrackWidget.getCredentials();
-    console.log(creds);
+    // var creds = ftrackWidget.getCredentials();
+    // console.log(creds);
 
-    session = new ftrack.Session(
-        creds.serverUrl,
-        creds.apiUser,
-        creds.apiKey
-    );
+    // session = new ftrack.Session(
+    //     creds.serverUrl,
+    //     creds.apiUser,
+    //     creds.apiKey
+    // );
 
     var namecheck = preFlightComboElement();
 
