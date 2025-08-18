@@ -76,7 +76,7 @@ function setCurrentShotNameField() {
         var propsearchfield = document.getElementById("propertysearch");
 
         // CHECKING IF SHOT OR TASK
-        if (entity.type == "Shot") {
+        if (entity.__entity_type__ == "Shot") {
 
             if (propsearchfield.classList.contains("shot-search-bar-typetask")) {
                 propsearchfield.classList.remove("shot-search-bar-typetask");
