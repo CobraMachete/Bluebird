@@ -54,7 +54,7 @@ function setCurrentShotNameField() {
     var shotsearchbox = document.getElementById("searchbar");
 
      //CREDENTIALS AND SESSION
-    var creds = getCredentials();
+    var creds = ftrackWidget.getCredentials();
     console.log(creds);
 
     session = new ftrack.Session(
