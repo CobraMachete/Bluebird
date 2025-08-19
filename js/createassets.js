@@ -67,7 +67,7 @@ function setCurrentShotNameField(selEntObj) {
 
         if (pkgsearchfield.classList.contains("package-search-bar-task")) {
             pkgsearchfield.classList.remove("package-search-bar-task");
-            pkgsearchfield.classList.add("package-search-bar-shots");
+            pkgsearchfield.classList.add("package-search-bar-shot");
         }
 
 
@@ -80,8 +80,8 @@ function setCurrentShotNameField(selEntObj) {
             propsearchfield.classList.add("shot-search-bar-typetask");
         }
 
-        if (pkgsearchfield.classList.contains("package-search-bar-shots")) {
-            pkgsearchfield.classList.remove("package-search-bar-shots");
+        if (pkgsearchfield.classList.contains("package-search-bar-shot")) {
+            pkgsearchfield.classList.remove("package-search-bar-shot");
             pkgsearchfield.classList.add("package-search-bar-task");
         }
 
