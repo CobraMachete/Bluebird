@@ -63,19 +63,18 @@ function setCurrentShotNameField() {
     //     creds.apiKey
     // );
 
-    var namecheck = preFlightComboElement();
+    // var namecheck = preFlightComboElement();
 
     if (namecheck !== false) {
 
         //GETTING BASE ENTITY
-        var entity = ftrackWidget.getEntity();
+        // var entity = ftrackWidget.getEntity();
 
-        console.log(entity);
+        // console.log(entity);
 
         var shotsearchbox = document.getElementById("searchbar");
         var propsearchfield = document.getElementById("propertysearch");
 
-        console.log(entity)
         console.log(theselectedent)
 
         // CHECKING IF SHOT OR TASK
@@ -86,7 +85,7 @@ function setCurrentShotNameField() {
                 propsearchfield.classList.add("shot-search-bar-typeshot");
             }
 
-            shotsearchbox.value = entity.name;
+            shotsearchbox.value = theselectedent.name;
 
         } else {
 
@@ -95,7 +94,7 @@ function setCurrentShotNameField() {
                 propsearchfield.classList.add("shot-search-bar-typetask");
             }
 
-            shotsearchbox.value = entity.name;
+            shotsearchbox.value = theselectedent.name;
 
         }
         
