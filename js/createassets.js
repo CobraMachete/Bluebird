@@ -55,6 +55,8 @@ function setCurrentShotNameField(selEntObj) {
     var shotsearchbox = document.getElementById("searchbar");
     var propsearchfield = document.getElementById("propertysearch");
     var pkgsearchfield = document.getElementById("packagesearch");
+    var runbutton = document.getElementById("execbtn");
+
 
     tasksearchbox.addEventListener('input', function(e) {
 
@@ -95,7 +97,7 @@ function setCurrentShotNameField(selEntObj) {
             pkgsearchfield.classList.add("package-search-bar-shot");
         }
 
-
+        runbutton.innerText = "Rename Shot";
         shotsearchbox.value = selEntObj.name;
 
     } else {
@@ -110,6 +112,7 @@ function setCurrentShotNameField(selEntObj) {
             pkgsearchfield.classList.add("package-search-bar-task");
         }
 
+        runbutton.innerText = "Rename Task";
         shotsearchbox.value = selEntObj.name;
 
     }
