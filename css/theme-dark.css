@@ -644,7 +644,7 @@ body {
     background-image: url("../img/shots_icon.png");
     background-position: 95% 10px; 
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: 35px;
     padding-left: 20px;
     opacity: 50%;
     justify-content: center;
@@ -676,7 +676,7 @@ body {
     background-image: url("../img/task_icon.png");
     background-position: 95% 10px; 
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: 35px;
     padding-left: 20px;
     opacity: 50%;
     justify-content: center;
