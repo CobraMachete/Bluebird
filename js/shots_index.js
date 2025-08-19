@@ -55,6 +55,8 @@
             console.log(theprjid)
             console.log("=======================================================    THE PROPNAME IS:     ====================================================================");
             console.log(propName)
+
+            setCurrentShotNameField(theselectedent);
             
             
             

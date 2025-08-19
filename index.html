@@ -63,24 +63,6 @@
 
             });
 
-            document.addEventListener('DOMContentLoaded', () => {
-                console.log("ALL THIS SHIT HAS FINALLY LOADED");
-                window.ftrackWidget.initialize({
-                    onWidgetLoad(content) {
-                    // Now safe to run
-                    
-                    initMyFeature({
-                        creds: window.ftrackWidget.getCredentials(),
-                        entity: window.ftrackWidget.getEntity(),
-                        api: window.ftrackWidget,
-                        content
-                    });
-                    },
-                    onWidgetUpdate(update) {
-                    // Optional: respond to selection changes
-                    }
-                });
-            });
 
             
             var theprjid = "";

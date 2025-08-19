@@ -49,28 +49,7 @@ function preFlightPackageElement() {
 
 }
 
-function setCurrentShotNameField() {
-
-    var shotsearchbox = document.getElementById("searchbar");
-
-     //CREDENTIALS AND SESSION
-    // var creds = ftrackWidget.getCredentials();
-    // console.log(creds);
-
-    // session = new ftrack.Session(
-    //     creds.serverUrl,
-    //     creds.apiUser,
-    //     creds.apiKey
-    // );
-
-    // var namecheck = preFlightComboElement();
-
-    
-
-    //GETTING BASE ENTITY
-    // var entity = ftrackWidget.getEntity();
-
-    // console.log(entity);
+function setCurrentShotNameField(selEntObj) {
 
     var shotsearchbox = document.getElementById("searchbar");
     var propsearchfield = document.getElementById("propertysearch");
@@ -78,14 +57,14 @@ function setCurrentShotNameField() {
     console.log(theselectedent)
 
     // CHECKING IF SHOT OR TASK
-    if (theselectedent.__entity_type__ == "Shot") {
+    if (selEntObj.__entity_type__ == "Shot") {
 
         if (propsearchfield.classList.contains("shot-search-bar-typetask")) {
             propsearchfield.classList.remove("shot-search-bar-typetask");
             propsearchfield.classList.add("shot-search-bar-typeshot");
         }
 
-        shotsearchbox.value = theselectedent.name;
+        shotsearchbox.value = selEntObj.name;
 
     } else {
 
@@ -94,7 +73,7 @@ function setCurrentShotNameField() {
             propsearchfield.classList.add("shot-search-bar-typetask");
         }
 
-        shotsearchbox.value = theselectedent.name;
+        shotsearchbox.value = selEntObj.name;
 
     }
         
