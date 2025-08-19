@@ -51,9 +51,34 @@ function preFlightPackageElement() {
 
 function setCurrentShotNameField(selEntObj) {
 
+    var tasksearchbox = document.getElementById("tasksearchbar");
     var shotsearchbox = document.getElementById("searchbar");
     var propsearchfield = document.getElementById("propertysearch");
     var pkgsearchfield = document.getElementById("packagesearch");
+
+    tasksearchbox.addEventListener('input', function(e) {
+
+        if (selectionType == "Task") {
+
+            var targinput = e.target.value;
+            var sanshot = sanitizetask(targinput);
+            
+            // PUSHING THE SANITIZED TEXT BACK TO FIELD
+            tasksearchbox.value = sanshot;
+
+        } else {
+
+            var targinput = e.target.value;
+            var sanshot = sanitizeshot(targinput);
+            
+            // PUSHING THE SANITIZED TEXT BACK TO FIELD
+            tasksearchbox.value = sanshot;
+
+        }
+        
+        
+
+    });
 
     console.log(theselectedent)
 

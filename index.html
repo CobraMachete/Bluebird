@@ -32,7 +32,7 @@
 
                 
                 var shotsearchbox = document.getElementById("searchbar");
-                var tasksearchbox = document.getElementById("tasksearchbar");
+                // var tasksearchbox = document.getElementById("tasksearchbar");
 
                 
                 // shotsearchbox.addEventListener('input', function(e) {
@@ -50,29 +50,29 @@
 
 
                 //EVENT LISTENER FOR PACKAGE SEARCH BOX
-                tasksearchbox.addEventListener('input', function(e) {
+                // tasksearchbox.addEventListener('input', function(e) {
 
-                    if (selectionType == "Task") {
+                //     if (selectionType == "Task") {
 
-                        var targinput = event.target.value;
-                        var sanshot = sanitizetask(targinput);
+                //         var targinput = e.target.value;
+                //         var sanshot = sanitizetask(targinput);
                         
-                        // PUSHING THE SANITIZED TEXT BACK TO FIELD
-                        tasksearchbox.value = sanshot;
+                //         // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                //         tasksearchbox.value = sanshot;
 
-                    } else {
+                //     } else {
 
-                        var targinput = event.target.value;
-                        var sanshot = sanitizeshot(targinput);
+                //         var targinput = e.target.value;
+                //         var sanshot = sanitizeshot(targinput);
                         
-                        // PUSHING THE SANITIZED TEXT BACK TO FIELD
-                        tasksearchbox.value = sanshot;
+                //         // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                //         tasksearchbox.value = sanshot;
 
-                    }
+                //     }
                     
                     
 
-                });
+                // });
 
                 
 

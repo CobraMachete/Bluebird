@@ -642,7 +642,7 @@ body {
     border-radius: 10px;
     background: rgba(82, 82, 82, .1);
     background-image: url("../img/shots_icon.png");
-    background-position: 95% 10px; 
+    background-position: 95% 5px; 
     background-repeat: no-repeat;
     background-size: 35px;
     padding-left: 20px;
@@ -674,7 +674,7 @@ body {
     border-radius: 10px;
     background: rgba(82, 82, 82, .1);
     background-image: url("../img/task_icon.png");
-    background-position: 95% 10px; 
+    background-position: 95% 5px; 
     background-repeat: no-repeat;
     background-size: 35px;
     padding-left: 20px;
