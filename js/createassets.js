@@ -58,7 +58,7 @@ function setCurrentShotNameField(selEntObj) {
 
     tasksearchbox.addEventListener('input', function(e) {
 
-        if (selectionType == "Task") {
+        if (selEntObj.__entity_type__ == "Task") {
 
             var targinput = e.target.value;
             var sanshot = sanitizetask(targinput);
