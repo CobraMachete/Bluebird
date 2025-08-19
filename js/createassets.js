@@ -101,6 +101,9 @@ function setCurrentShotNameField() {
     }
 }
 
+function dummytest(inputitem) {
+    console.log(inputitem)
+}
 
 function updateShotOrTask() {
 
