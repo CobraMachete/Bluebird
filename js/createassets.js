@@ -396,10 +396,9 @@ function createPackage(entity, packageName, prjid) {
 }
 
 function sanitizetask(str) {
-    var snstr = str.replaceAll(" ","_");
-    snstr.toUpperCase();
-    return snstr
+    return str.replaceAll(" ", "_").toUpperCase();
 }
+
 
 function sanitizeshot(str) {
     var snstr = str.replaceAll(" ","_");
