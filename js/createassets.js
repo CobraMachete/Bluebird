@@ -53,6 +53,7 @@ function setCurrentShotNameField(selEntObj) {
 
     var shotsearchbox = document.getElementById("searchbar");
     var propsearchfield = document.getElementById("propertysearch");
+    var pkgsearchfield = document.getElementById("packagesearch");
 
     console.log(theselectedent)
 
@@ -64,6 +65,12 @@ function setCurrentShotNameField(selEntObj) {
             propsearchfield.classList.add("shot-search-bar-typeshot");
         }
 
+        if (pkgsearchfield.classList.contains("package-search-bar-task")) {
+            pkgsearchfield.classList.remove("package-search-bar-task");
+            pkgsearchfield.classList.add("package-search-bar-shots");
+        }
+
+
         shotsearchbox.value = selEntObj.name;
 
     } else {
@@ -71,6 +78,11 @@ function setCurrentShotNameField(selEntObj) {
         if (propsearchfield.classList.contains("shot-search-bar-typeshot")) {
             propsearchfield.classList.remove("shot-search-bar-typeshot");
             propsearchfield.classList.add("shot-search-bar-typetask");
+        }
+
+        if (pkgsearchfield.classList.contains("package-search-bar-shots")) {
+            pkgsearchfield.classList.remove("package-search-bar-shots");
+            pkgsearchfield.classList.add("package-search-bar-task");
         }
 
         shotsearchbox.value = selEntObj.name;
@@ -356,6 +368,12 @@ function createPackage(entity, packageName, prjid) {
 
     
 
+}
+
+function sanitizetask(str) {
+    var snstr = str.replaceAll(" ","_");
+    snstr.toUpperCase();
+    return snstr
 }
 
 function sanitizeshot(str) {

@@ -27,8 +27,10 @@
     <body>
         <script>
 
+            var selectionType = "Shot";
             $(document).ready(function() {
 
+                
                 var shotsearchbox = document.getElementById("searchbar");
                 var tasksearchbox = document.getElementById("tasksearchbar");
 
@@ -45,16 +47,30 @@
 
                 // AUTOFILL CURRENT SOT TEXT BOX
 
-
+                
 
                 //EVENT LISTENER FOR PACKAGE SEARCH BOX
                 tasksearchbox.addEventListener('input', function(e) {
+
+                    if (selectionType == "Task") {
+
+                        var targinput = event.target.value;
+                        var sanshot = sanitizetask(targinput);
+                        
+                        // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                        tasksearchbox.value = sanshot;
+
+                    } else {
+
+                        var targinput = event.target.value;
+                        var sanshot = sanitizeshot(targinput);
+                        
+                        // PUSHING THE SANITIZED TEXT BACK TO FIELD
+                        tasksearchbox.value = sanshot;
+
+                    }
                     
-                    var targinput = event.target.value;
-                    var sanshot = sanitizeshot(targinput);
                     
-                    // PUSHING THE SANITIZED TEXT BACK TO FIELD
-                    tasksearchbox.value = sanshot;
 
                 });
 
@@ -89,13 +105,13 @@
                             <input id="searchbar" type="text" name="search" placeholder="Current Shot..." readonly>
                         </div>
 
-                        <div class="package-search-bar" id="packagesearch" style="margin-top: 10px">
-                            <input id="tasksearchbar" type="text" name="search" placeholder="Change to Name...(ex: 0310_player_trans_a)">
+                        <div class="package-search-bar-shots" id="packagesearch" style="margin-top: 10px">
+                            <input id="tasksearchbar" type="text" name="search" placeholder="New Name...(ex: 0310_plyr_trans_a)">
                         </div>
 
                         <div class="bottomrowcontainer">
                             <div class="createbtncont">
-                                <button class="createbtn" type="button" onclick="updateShotOrTask()">Rename Shot</button>
+                                <button class="createbtn" id="execbtn" type="button" onclick="updateShotOrTask()">Rename Shot</button>
                             </div>
                         </div>
                         

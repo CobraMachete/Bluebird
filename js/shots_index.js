@@ -45,11 +45,13 @@
 
         // WAIT FOR BOTH REQUESTS TO FINISH, THEN UPDATE INTERFACE.
         Promise.all([entNameRequest, prjRequest, prjNameSearch]).then(function (values) {
+            selectionType = values[0].data[0].__entity_type__;
             theselectedent = values[0].data[0];            
             theselectedentid = values[0].data[0].id;
             theprjid = values[1].data[0].project_id;
             propName = values[2].data[0].ancestors[0].name;
-            console.log("=======================================================    THE PRODUCTION IS:     ====================================================================");
+
+            console.log("=======================================================    THE SELECTION IS:     ====================================================================");
             console.log(theselectedent)
             console.log("=======================================================    THE PROJECT IS:     ====================================================================");
             console.log(theprjid)
