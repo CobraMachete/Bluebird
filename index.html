@@ -64,10 +64,11 @@
             });
 
             document.addEventListener('DOMContentLoaded', () => {
+                console.log("ALL THIS SHIT HAS FINALLY LOADED");
                 window.ftrackWidget.initialize({
                     onWidgetLoad(content) {
                     // Now safe to run
-                    console.log("ALL THIS SHIT HAS FINALLY LOADED");
+                    
                     initMyFeature({
                         creds: window.ftrackWidget.getCredentials(),
                         entity: window.ftrackWidget.getEntity(),
