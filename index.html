@@ -62,6 +62,25 @@
 
 
             });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                window.ftrackWidget.initialize({
+                    onWidgetLoad(content) {
+                    // Now safe to run
+                    console.log("ALL THIS SHIT HAS FINALLY LOADED");
+                    initMyFeature({
+                        creds: window.ftrackWidget.getCredentials(),
+                        entity: window.ftrackWidget.getEntity(),
+                        api: window.ftrackWidget,
+                        content
+                    });
+                    },
+                    onWidgetUpdate(update) {
+                    // Optional: respond to selection changes
+                    }
+                });
+            });
+
             
             var theprjid = "";
             var theselectedent;
@@ -112,10 +131,7 @@
         <script type="text/javascript" src="js/ftrack_widget.js"></script>
         <script type="text/javascript" src="js/shots_index.js"></script>
         <script type="text/javascript" src="js/createassets.js"></script>
-        <script>
-            dummytest(document.getElementById("searchbar"));
-            setCurrentShotNameField();
-        </script>
+        
         
         
     </body>
