@@ -65,40 +65,40 @@ function setCurrentShotNameField() {
 
     // var namecheck = preFlightComboElement();
 
-    if (namecheck !== false) {
+    
 
-        //GETTING BASE ENTITY
-        // var entity = ftrackWidget.getEntity();
+    //GETTING BASE ENTITY
+    // var entity = ftrackWidget.getEntity();
 
-        // console.log(entity);
+    // console.log(entity);
 
-        var shotsearchbox = document.getElementById("searchbar");
-        var propsearchfield = document.getElementById("propertysearch");
+    var shotsearchbox = document.getElementById("searchbar");
+    var propsearchfield = document.getElementById("propertysearch");
 
-        console.log(theselectedent)
+    console.log(theselectedent)
 
-        // CHECKING IF SHOT OR TASK
-        if (theselectedent.__entity_type__ == "Shot") {
+    // CHECKING IF SHOT OR TASK
+    if (theselectedent.__entity_type__ == "Shot") {
 
-            if (propsearchfield.classList.contains("shot-search-bar-typetask")) {
-                propsearchfield.classList.remove("shot-search-bar-typetask");
-                propsearchfield.classList.add("shot-search-bar-typeshot");
-            }
-
-            shotsearchbox.value = theselectedent.name;
-
-        } else {
-
-            if (propsearchfield.classList.contains("shot-search-bar-typeshot")) {
-                propsearchfield.classList.remove("shot-search-bar-typeshot");
-                propsearchfield.classList.add("shot-search-bar-typetask");
-            }
-
-            shotsearchbox.value = theselectedent.name;
-
+        if (propsearchfield.classList.contains("shot-search-bar-typetask")) {
+            propsearchfield.classList.remove("shot-search-bar-typetask");
+            propsearchfield.classList.add("shot-search-bar-typeshot");
         }
-        
+
+        shotsearchbox.value = theselectedent.name;
+
+    } else {
+
+        if (propsearchfield.classList.contains("shot-search-bar-typeshot")) {
+            propsearchfield.classList.remove("shot-search-bar-typeshot");
+            propsearchfield.classList.add("shot-search-bar-typetask");
+        }
+
+        shotsearchbox.value = theselectedent.name;
+
     }
+        
+    
 }
 
 function dummytest(inputitem) {
